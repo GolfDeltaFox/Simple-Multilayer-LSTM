@@ -3,6 +3,7 @@ import tensorflow as tf
 import random
 from dataset import data_generator
 from initializer import initializer
+import sys
 
 initializer()
 
@@ -149,7 +150,8 @@ def test(graph, num_steps = 200, batch_size = 32, checkpoint=None ):
     pass
 
 
-mode = ['train', 'test', 'generate'][0]
+# mode = ['train', 'test', 'generate'][0]
+mode = sys.argv[1]
 
 model_hash = 'acc3'
 
